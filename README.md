@@ -38,12 +38,15 @@
 ### 2. 项目结构
 
 将 `auto_pic.c` 文件放置在项目的根目录下，并创建以下目录结构：
+
+### 3. 编译命令
+
+在终端中，进入到 `auto_pic.c` 文件所在的目录，然后执行以下编译命令：
 请在 `images/` 目录中放入一些用于测试的 BMP 和 JPG 图片。
 
 ### 3. 编译命令
 
 在终端中，进入到 `auto_pic.c` 文件所在的目录，然后执行以下编译命令：
-arm-linux-gcc auto_pic.c -o auto_pic \
-    -I/path/to/your/arm-toolchain/include \
-    -L/path/to/your/arm-toolchain/lib \
-    -ljpeg -lm -lpthread -lrt
+使用jpeg库的代码的编译
+```bash
+arm-linux-gcc  show_jpg.c -o show_jpg  -I  /home/vcc/jpeg/include  -ljpeg   -L /home/vcc/jpeg/lib
